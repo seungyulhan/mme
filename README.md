@@ -28,31 +28,13 @@ git checkout b3a28992eca103cab3cb58363dd7a4bb07f250a0
 export PYTHONPATH=$<install_path>:${PYTHONPATH}
 ```
 
-2. Install Mujoco 131 [Download](https://www.roboti.us/index.html) at rllab path:
-
-```
-mkdir -p /tmp/mujoco_tmp && cd /tmp/mujoco_tmp
-wget -P . https://www.roboti.us/download/mjpro131_linux.zip
-unzip mjpro131_linux.zip
-mkdir <install_path>/rllab/vendor/mujoco
-cp ./mjpro131/bin/libmujoco131.so <install_path>/rllab/vendor/mujoco
-cp ./mjpro131/bin/libglfw.so.3 <install_path>/rllab/vendor/mujoco
-cd ..
-rm -rf /tmp/mujoco_tmp
-```
-
-3. Copy your Mujoco license key (mjkey.txt) to rllab path:
-```
-cp <mujoco_key_folder>/mjkey.txt <install_path>/rllab/vendor/mujoco
-```
-
-4. Create conda environment and add path:
+2. Create conda environment and add path:
 ```
 conda create -n mme python=3.6
 export PATH="/home/<user_name>/anaconda3/envs/dac/bin:$PATH"
 ```
 
-5. Install libraries and packages:
+3. Install libraries and packages:
 ```
 sudo apt-get install python3-pip mpich libopenmpi-dev libgl-dev libglu-dev libxrandr-dev libxinerama-dev libxi-dev libxcursor-dev
 conda activate mme
