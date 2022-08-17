@@ -44,8 +44,8 @@ rm -rf /tmp/mujoco_tmp
 3. Get Mujoco license key (mjkey.txt) [Download](https://web.archive.org/web/20220315114911/https://roboti.us/file/mjkey.txt) and copy it to rllab path:
 ```
 cp <mujoco_key_folder>/mjkey.txt <install_path>/rllab/vendor/mujoco
-export MUJOCO_PY_MJKEY_PATH="/home/user/rllab/vendor/mujoco/mjkey.txt"
-export MUJOCO_PY_MJPRO_PATH="/home/user/rllab/vendor/mujoco/mjpro131"
+export MUJOCO_PY_MJKEY_PATH="<install_path>/rllab/vendor/mujoco/mjkey.txt"
+export MUJOCO_PY_MJPRO_PATH="<install_path>/rllab/vendor/mujoco/mjpro131"
 ```
 
 4. Create conda environment and add path:
